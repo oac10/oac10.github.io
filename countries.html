@@ -7,104 +7,156 @@
 <script>
   $(document).ready( function () {
       $('#top10Countries').DataTable();
+      $('#top10CountriesPop').DataTable();
 
   } );
 
   </script>
 <body>
   <h2>Countries</h2>
-  <h3>Top 10  Countries</h3>
+  <h3>Top 10 Countries by size</h3>
   <table id="top10Countries">
     <thead>
       <tr>
-        <th>Number</th>
-        <th><b>Name</b></th>
-        <th><b>Population</b></th>
-        <th><b>Size</b></th>
-        <th><b>Population density</b></th>
-        <th><b>GDP</b></th>
+        <th align="left">Number</th>
+        <th align="left"><b>Name</b></th>
+        <th align="left"><b>Size (million square miles)</b></th>
+
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>1.</td>
+      <td>Russia</td>
+      <td>6.6</td>
+
+    </tr>
+    <tr>
+      <td>2.</td>
+      <td>Canada</td>
+      <td>3.86</td>
+
+    </tr>
+    <tr>
+      <td>3.</td>
+      <td>USA</td>
+      <td>3.8</td>
+
+    </tr>
+    <tr>
+      <td>4.</td>
+      <td>China</td>
+      <td>3.69</td>
+
+    </tr>
+    <tr>
+      <td>5.</td>
+      <td>Brazil</td>
+      <td>3.29</td>
+
+    </tr>
+    <tr>
+      <td>6.</td>
+      <td>Australia</td>
+      <td>2.99</td>
+
+    </tr>
+    <tr>
+      <td>7.</td>
+      <td>India</td>
+      <td>1.27</td>
+
+    </tr>
+    <tr>
+      <td>8.</td>
+      <td>Argentina</td>
+      <td>1.07</td>
+
+    </tr>
+    <tr>
+      <td>9.</td>
+      <td>Kazhakstan</td>
+      <td>1.05</td>
+
+    </tr>
+    <tr>
+      <td>10.</td>
+      <td>Algeria</td>
+      <td>0.92</td>
+
+    </tr>
+    </tbody>
+  </table>
+  <h3>Top 10 Countries by population</h3>
+  <table id="top10CountriesPop">
+    <thead>
+      <tr>
+        <th align="left">Number</th>
+        <th align="left"><b>Name</b></th>
+        <th align="left"><b>Population (million peple)</b></th>
+
       </tr>
     </thead>
     <tbody>
     <tr>
       <td>1.</td>
       <td>China</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>1380</td>
+
     </tr>
     <tr>
       <td>2.</td>
       <td>India</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>1280</td>
+
     </tr>
     <tr>
       <td>3.</td>
       <td>USA</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>327</td>
+
     </tr>
     <tr>
       <td>4.</td>
       <td>Indonesia</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>261</td>
+
     </tr>
     <tr>
       <td>5.</td>
       <td>Brazil</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>207</td>
+
     </tr>
     <tr>
       <td>6.</td>
       <td>Pakistan</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>205</td>
+
     </tr>
     <tr>
       <td>7.</td>
       <td>Nigeria</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>191</td>
+
     </tr>
     <tr>
       <td>8.</td>
       <td>Bangladesh</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>158</td>
+
     </tr>
     <tr>
       <td>9.</td>
       <td>Russia</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>142</td>
+
     </tr>
     <tr>
       <td>10.</td>
       <td>Mexico</td>
-      <td></td>
-      <td></td>
-      <td></td>
-        <td></td>
+      <td>125</td>
+
     </tr>
     </tbody>
   </table>

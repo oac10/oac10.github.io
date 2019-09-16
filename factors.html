@@ -1,0 +1,43 @@
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+  function calcFactors() {
+    $("#factors").text("");
+    $("#nf").text("");
+      var n = document.getElementById('num').value;
+      var i=2;
+      var halfn;
+      var numFac=2;
+      if(n%2==0) {
+        console.log("even");
+        halfn=n/2;
+      }
+      else {
+        halfn=(parseInt(n,10)+1)/2;
+        console.log("odd");
+      }
+      $("#factors").append(1 + ", ");
+      console.log(halfn);
+      while(i<=halfn) {
+        if(n% i==0) {
+          console.log(i + " is a factor");
+          $("#factors").append(i + ", ");
+          numFac++;
+        }
+        i++;
+      }
+$("#factors").append(n);
+$("#nf").append(numFac);
+  }
+  </script>
+
+  <body>
+    <label for=Number>Number to get factors for:</label>
+  <input type=text name=Number id=num>
+  <button name=go onclick="calcFactors()">go</button>
+  NF<span id=nf></span>
+  <br/>
+  <div id=factors></div>
+  </body>
