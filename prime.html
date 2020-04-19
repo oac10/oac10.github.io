@@ -1,0 +1,69 @@
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+  function calcprime() {
+    $("#factors").text("");
+    $("#nf").text("");
+      var n = document.getElementById('num').value;
+      var i=3;
+      var oscarResult="";
+      var daddyResult="";
+      var halfn;
+      var ocalcs=0;
+      var dcalcs=0;
+      if(n%2==0) {
+        console.log("even");
+        daddyResult="No (" + 1 + ")";
+        oscarResult="No (" + 1 + ")";
+      }
+      else {
+        halfn=(parseInt(n,10)+1)/2;
+        while(i<=halfn) {
+          console.log(i + ">" + n + "/" +i +"="+(i > n/i) );
+          ocalcs++;
+          if(i > n/i) {
+
+            console.log(ocalcs);
+            oscarResult="Yes (" + ocalcs + ")";
+            break;
+          }
+          i=i+2;
+        }
+        if(oscarResult=="") {
+          oscarResult="Yes (" + ocalcs + ")";
+        }
+        i=2;
+        while(i<=halfn) {
+          dcalcs++;
+          if(n% i==0) {
+            daddyResult="No (" + dcalcs + ")";
+            break;
+          }
+          i++;
+        }
+        if(daddyResult=="") {
+          daddyResult="Yes (" + dcalcs + ")";
+        }
+      }
+
+
+
+
+//$("#factors").append(toFixed(result));
+$("#primedaddy").text(daddyResult);
+$("#primeoscar").text(oscarResult);
+}
+
+  </script>
+
+  <body>
+    <label for=Number>Is number a prime:</label>
+  <input type=text name=Number id=num>
+  <button name=go onclick="calcprime()">go</button>
+  NF<span id=nf></span>
+  <br/>
+  Oscar:<div id=primeoscar></div><br/>
+  Daddy: <div id=primedaddy></div>
+  </body>

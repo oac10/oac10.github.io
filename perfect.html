@@ -1,0 +1,26 @@
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+  function calcPerfect() {
+    $("#factors").text("");
+    $("#nf").text("");
+      var n = document.getElementById('num').value;
+      var result=1;
+      result=n*n*n;
+
+//$("#factors").append(toFixed(result));
+$("#factors").append(result);
+}
+
+  </script>
+
+  <body>
+    <label for=Number>Number to get cubes for:</label>
+  <input type=text name=Number id=num>
+  <button name=go onclick="calcPerfect()">go</button>
+  NF<span id=nf></span>
+  <br/>
+  <div id=factors></div>
+  </body>

@@ -1,0 +1,46 @@
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+  function calcFactorials() {
+    $("#factors").text("");
+    $("#nf").text("");
+      var n = document.getElementById('num').value;
+      var result=1;
+      while(n>=1) {
+        console.log(n + ":" +result);
+        result=result*n;
+        n--;
+      }
+
+//$("#factors").append(toFixed(result));
+$("#factors").append(result);
+}
+function toFixed(x) {
+  if (Math.abs(x) < 1.0) {
+    var e = parseInt(x.toString().split('e-')[1]);
+    if (e) {
+        x *= Math.pow(10,e-1);
+        x = '0.' + (new Array(e)).join('0') + x.toString().substring(2);
+    }
+  } else {
+    var e = parseInt(x.toString().split('+')[1]);
+    if (e > 20) {
+        e -= 20;
+        x /= Math.pow(10,e);
+        x += (new Array(e+1)).join('0');
+    }
+  }
+  return x;
+}
+  </script>
+
+  <body>
+    <label for=Number>Number to get factorial for:</label>
+  <input type=text name=Number id=num>
+  <button name=go onclick="calcFactorials()">go</button>
+  NF<span id=nf></span>
+  <br/>
+  <div id=factors></div>
+  </body>
