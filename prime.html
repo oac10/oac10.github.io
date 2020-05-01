@@ -23,6 +23,10 @@
         while(i<=halfn) {
           console.log(i + ">" + n + "/" +i +"="+(i > n/i) );
           ocalcs++;
+          if(n% i==0) {
+            oscarResult="No (" + ocalcs + ")";
+            break;
+          }
           if(i > n/i) {
 
             console.log(ocalcs);
